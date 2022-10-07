@@ -1,6 +1,6 @@
-import type { LoaderFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
+import type { LoaderFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
+import { json } from "@remix-run/cloudflare";
 
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
