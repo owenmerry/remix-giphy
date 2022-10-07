@@ -7,7 +7,7 @@ export const loader: LoaderFunction = async ({ request }) => {
   const term = url.searchParams.get("term");
 
   const res = await fetch(
-    `https://api.giphy.com/v1/gifs/search?api_key=[add-your-api-key-here]&q=${term}&limit=25&offset=0&rating=g&lang=en`
+    `https://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&q=${term}&limit=25&offset=0&rating=g&lang=en`
   );
   const gifs = await res.json();
 
